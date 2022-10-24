@@ -1,0 +1,40 @@
+<div>
+  <mat-card>
+    <mat-card-title>
+      Editar Información
+    </mat-card-title>
+    <mat-card-content>
+      <div class="form-content" [formGroup]="formProducto">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre del producto</mat-label>
+            <input matInput formControlName="nombre">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <input matInput formControlName="descripcion">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Precio de venta</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" formControlName="precioVenta">
+            <span matPrefix>S/.&nbsp;</span>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Precio de compra</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" formControlName="precioCompra">
+            <span matPrefix>S/.&nbsp;</span>
+          </mat-form-field>
+        </p>
+
+        <button mat-raised-button (click)="actualizar()" [disabled]="formProducto.invalid">Actualizar</button>
+        <button mat-raised-button (click)="cancelar()"> Cancelar</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

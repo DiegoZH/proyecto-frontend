@@ -1,0 +1,34 @@
+.table-container{
+  width: 100%;
+}
+table{
+  width: 100%;
+}
+
+:host{
+  width: 100%;
+}
+th.mat-header-cell {
+  text-align: center;
+}
+.mat-cell {
+  font-size: 14px;
+  text-align: center;
+}
+.mat-raised-button{
+  color: #eeeeee;
+  background-color: #007dd9;
+}
+.atras{
+  float: right;
+}
+.limpiar{
+  margin-left: 15px;
+}
+.form-content{
+  display: flex;
+  flex-direction: row;
+  horiz-align: center;
+  justify-content: space-between;
+  height: 80px;
+}

@@ -1,0 +1,45 @@
+<div>
+  <button mat-raised-button (click)="agregarTienda()">Registrar Nueva Tienda</button>
+  <button mat-raised-button (click)="atras()" class="registrar">Atrás</button>
+</div>
+<div class="table-container">
+  <table mat-table [dataSource]="tiendaDataSource">
+    <ng-container matColumnDef="codigoTienda">
+      <th mat-header-cell *matHeaderCellDef>Código de Tienda</th>
+      <td mat-cell *matCellDef="let row">
+        {{row.codigoTienda}}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef>Tienda</th>
+      <td mat-cell *matCellDef="let row">
+        {{row.nombre}}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="direccion">
+      <th mat-header-cell *matHeaderCellDef>Dirección</th>
+      <td mat-cell *matCellDef="let row">
+        {{row.direccion}}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="objetivo">
+      <th mat-header-cell *matHeaderCellDef>Objetivo</th>
+      <td mat-cell *matCellDef="let row">
+        S/. {{row.objetivo}}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="editarTienda(row)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr *matNoDataRow>
+      <td>No hay data disponible</td>
+    </tr>
+  </table>
+</div>

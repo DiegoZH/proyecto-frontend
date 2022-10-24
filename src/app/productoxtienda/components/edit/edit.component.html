@@ -1,0 +1,77 @@
+<div>
+  <mat-card>
+    <mat-card-title>
+      Editar Información
+    </mat-card-title>
+    <mat-card-content>
+      <div class="form-content" [formGroup]="formProductoxTienda">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Producto</mat-label>
+            <input matInput formControlName="nombreProducto">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Tienda</mat-label>
+            <input matInput formControlName="nombreTienda">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Fecha de Llegada</mat-label>
+            <input matInput  formControlName="fechaLlegadaAlmacen" type="date" id="start" name="trip-start"
+                   value="2022-10-02"
+                   min="1900-01-01" max="2022-10-31">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Fecha de Salida</mat-label>
+            <input matInput  formControlName="fechaSalidaAlmacen" type="date" id="finish" name="trip-start"
+                   value="2022-10-02"
+                   min="1900-01-01" max="2022-10-31">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Dias en Inventario</mat-label>
+            <input matInput formControlName="diasInventario">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Demanda</mat-label>
+            <input matInput formControlName="demanda">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Cantidad comprada</mat-label>
+            <input matInput formControlName="cantidadComprada">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Cantidad vendida</mat-label>
+            <input matInput formControlName="cantidadVendida">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Cantidad vendidad rematada</mat-label>
+            <input matInput formControlName="cantidadVendidaRemate">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Stock</mat-label>
+            <input matInput formControlName="stock">
+          </mat-form-field>
+        </p>
+        <button mat-raised-button (click)="actualizar()" [disabled]="formProductoxTienda.invalid">Actualizar</button>
+        <button mat-raised-button (click)="cancelar()"> Cancelar</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
